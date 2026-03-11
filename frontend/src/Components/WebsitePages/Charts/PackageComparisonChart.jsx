@@ -32,7 +32,7 @@ useEffect(() => {
 const fetchData = async () => {
 try {
 const res = await axios.get(
-`http://localhost:8080/placementrecord/collegeinsights/${collegeId}`,
+`https://hirelens-9o7y.onrender.com/placementrecord/collegeinsights/${collegeId}`,
 {
     withCredentials :true
 }

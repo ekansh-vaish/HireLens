@@ -12,7 +12,7 @@ function UsersData() {
         const fetchUsers = async () => {
             try {
                 // Bhai yahan apni api ka path sahi kar lena
-                const res = await axios.get("http://localhost:8080/Auth/users", { withCredentials: true });
+                const res = await axios.get("https://hirelens-9o7y.onrender.com/Auth/users", { withCredentials: true });
                 setUsers(res.data.payload || []);
             } catch (err) {
                 console.error("Error fetching users:", err);

@@ -8,10 +8,12 @@ const CompanyRecordRoute = require("./Routes/CompanyData");
 const ContactUsRoute = require("./Routes/ContactUs");
 const cookieParser = require("cookie-parser");
 const cors = require('cors');
-const session = require("express-session");
-const MongoStore = require("connect-mongo");
-require("dotenv").config()
 const MongoDbAtlas = process.env.MONGODB_ATLAS;
+
+const session = require("express-session");
+
+const MongoStore = require("connect-mongo").default;
+require("dotenv").config()
 
 async function main() {
 await mongoose.connect(MongoDbAtlas)    
@@ -34,7 +36,7 @@ credentials : true
 }
 ));
 
-const store  = MongoStore.create({
+const store  =  MongoStore.create({
 mongoUrl : MongoDbAtlas,
 crypto :
 {

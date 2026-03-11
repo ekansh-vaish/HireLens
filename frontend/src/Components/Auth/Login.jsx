@@ -19,7 +19,7 @@ function Login() {
     setLoading(true);
     try {
       const res = await axios.post(
-        "http://localhost:8080/Auth/login",
+        "https://hirelens-9o7y.onrender.com/Auth/login",
         loginData,
         { withCredentials: true }
       );

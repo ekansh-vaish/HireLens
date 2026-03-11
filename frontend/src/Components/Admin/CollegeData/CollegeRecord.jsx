@@ -10,7 +10,7 @@ function CollegeRecord() {
 
   async function FetchRecords() {
     try {
-      const res = await axios.get("http://localhost:8080/placementrecord/getrecords", {
+      const res = await axios.get("https://hirelens-9o7y.onrender.com/placementrecord/getrecords", {
         withCredentials: true
       });
       setRecords(res.data.FetchRecord || []);

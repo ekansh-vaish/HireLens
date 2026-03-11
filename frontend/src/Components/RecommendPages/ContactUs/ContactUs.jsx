@@ -23,7 +23,7 @@ setStatus({ loading: true, success: null, error: null });
 
 try {
 // Bhai yahan apni API ka URL daal dena
-const response = await axios.post('http://localhost:8080/contactquery/addreport', formData,
+const response = await axios.post('https://hirelens-9o7y.onrender.com/contactquery/addreport', formData,
     {
     withCredentials : true    
     }

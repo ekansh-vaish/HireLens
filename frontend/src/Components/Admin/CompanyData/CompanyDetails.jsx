@@ -13,7 +13,7 @@ const [searchTerm, setSearchTerm] = useState("");
 async function fetchCompanies() {
 try {
 setLoading(true);
-const res = await axios.get("http://localhost:8080/companyquery/fetchdata", { withCredentials: true });
+const res = await axios.get("https://hirelens-9o7y.onrender.com/companyquery/fetchdata", { withCredentials: true });
 setCompanies(res.data.FetchData || []);
 } catch (err) { console.error(err); } finally { setLoading(false); }
 }
@@ -27,7 +27,7 @@ setShowModal(true);
 
 async function handleUpdate() {
 try {
-await axios.put(`http://localhost:8080/companyquery/editcompany/${selectedCompany._id}`, selectedCompany, { withCredentials: true });
+await axios.put(`https://hirelens-9o7y.onrender.com/companyquery/editcompany/${selectedCompany._id}`, selectedCompany, { withCredentials: true });
 setShowModal(false);
 fetchCompanies();
 } catch (err) { alert("Update failed"); }
@@ -36,7 +36,7 @@ fetchCompanies();
 async function handleDelete(id) {
 if (window.confirm("Delete this company?")) {
 try {
-await axios.delete(`http://localhost:8080/companyquery/deletecompanydata/${id}`, { withCredentials: true });
+await axios.delete(`https://hirelens-9o7y.onrender.com/companyquery/deletecompanydata/${id}`, { withCredentials: true });
 fetchCompanies();
 } catch (err) { console.error(err); }
 }

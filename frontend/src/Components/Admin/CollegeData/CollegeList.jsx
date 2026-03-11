@@ -15,7 +15,7 @@ const [selectedCollege, setSelectedCollege] = useState(null);
 
 async function fetchColleges() {
 try {
-const res = await axios.get("http://localhost:8080/collegedetail/getcolleges", {
+const res = await axios.get("https://hirelens-9o7y.onrender.com/collegedetail/getcolleges", {
 withCredentials: true
 });
 setColleges(res.data.CollegesData); 
@@ -42,7 +42,7 @@ async function handleUpdate(e) {
 e.preventDefault();
 try {
 await axios.put(
-`http://localhost:8080/collegedetail/updateCollege/${selectedCollege._id}`,
+`https://hirelens-9o7y.onrender.com/collegedetail/updateCollege/${selectedCollege._id}`,
 selectedCollege,
 { withCredentials: true }
 );
@@ -55,7 +55,7 @@ console.error("Update failed:", err);
 
 async function DeleteData(id) {
 try {
- await axios.delete(`http://localhost:8080/collegedetail/deleteCollege/${id}`, {
+ await axios.delete(`https://hirelens-9o7y.onrender.com/collegedetail/deleteCollege/${id}`, {
 withCredentials: true
 });
 fetchColleges();

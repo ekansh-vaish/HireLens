@@ -22,7 +22,7 @@ const [fetchingColleges, setFetchingColleges] = useState(true);
 useEffect(() => {
 async function fetchColleges() {
 try {
-const res = await axios.get("http://localhost:8080/collegedetail/getcolleges", {
+const res = await axios.get("https://hirelens-9o7y.onrender.com/collegedetail/getcolleges", {
 withCredentials: true
 });
 setColleges(res.data.CollegesData || []);
@@ -59,7 +59,7 @@ return;
 setLoading(true);
 try {
 await axios.post(
-"http://localhost:8080/Auth/register",
+"https://hirelens-9o7y.onrender.com/Auth/register",
 registerData,
 { withCredentials: true }
 );

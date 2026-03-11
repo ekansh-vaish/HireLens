@@ -1,5 +1,7 @@
 {
-  "engines": {"node": "v22.13.1"},
+  "engines": {
+    "node": "v22.13.1"
+  },
   "name": "course-app",
   "version": "1.0.0",
   "main": "index.js",

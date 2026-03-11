@@ -11,7 +11,7 @@ function ApplicationNav() {
 
   async function FetchRecords() {
     try {
-      const res = await axios.get("http://localhost:8080/placementrecord/getrecords", {
+      const res = await axios.get("https://hirelens-9o7y.onrender.com/placementrecord/getrecords", {
         withCredentials: true
       });
       setRecords(res.data.FetchRecord || []);
@@ -34,7 +34,7 @@ function ApplicationNav() {
 
   async function Logout() {
     try {
-      await axios.post("http://localhost:8080/Auth/logout", {}, { withCredentials: true });
+      await axios.post("https://hirelens-9o7y.onrender.com/Auth/logout", {}, { withCredentials: true });
       localStorage.clear();
       navigate('/login');
     } catch (err) {

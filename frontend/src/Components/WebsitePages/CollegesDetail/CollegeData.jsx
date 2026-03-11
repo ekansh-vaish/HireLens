@@ -13,7 +13,7 @@ async function FetchCollegeData() {
 try {
 setLoading(true);
 const response = await axios.get(
-`http://localhost:8080/collegedetail/fetchcollege/${id}`,
+`https://hirelens-9o7y.onrender.com/collegedetail/fetchcollege/${id}`,
 { withCredentials: true }
 );
 setCollegeData(response.data.Record);

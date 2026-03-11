@@ -24,7 +24,7 @@ function AddCollege() {
     setLoading(true);
     try {
        await axios.post(
-        "http://localhost:8080/collegedetail/addcollege",
+        "https://hirelens-9o7y.onrender.com/collegedetail/addcollege",
         collegeData,
         { withCredentials: true }
       );

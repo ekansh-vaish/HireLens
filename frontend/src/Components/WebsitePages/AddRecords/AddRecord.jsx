@@ -33,7 +33,7 @@ e.preventDefault();
 setLoading(true);
 try {
  await axios.post(
-"http://localhost:8080/placementrecord/addrecords",
+"https://hirelens-9o7y.onrender.com/placementrecord/addrecords",
 recordData,
 { withCredentials: true }
 );
@@ -60,7 +60,7 @@ setLoading(false);
 
 async function FetchData() {
 try {
-const getData = await axios.get(`http://localhost:8080/companyquery/fetchdata`, {
+const getData = await axios.get(`https://hirelens-9o7y.onrender.com/companyquery/fetchdata`, {
 withCredentials: true,
 });
 setFetchedData(getData.data.FetchData || []);

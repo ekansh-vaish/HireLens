@@ -23,7 +23,7 @@ e.preventDefault();
 setLoading(true);
 try {
 await axios.post(
-"http://localhost:8080/companyquery/addcompany",
+"https://hirelens-9o7y.onrender.com/companyquery/addcompany",
 addCompany,
 { withCredentials: true }
 );

@@ -12,7 +12,7 @@ const [selectedMsg, setSelectedMsg] = useState(null);
 useEffect(() => {
 const fetchMessages = async () => {
 try {
-const res = await axios.get("http://localhost:8080/contactquery/getdata", { withCredentials: true });
+const res = await axios.get("https://hirelens-9o7y.onrender.com/contactquery/getdata", { withCredentials: true });
 setMessages(res.data.FetchData || res.data || []);
 
 } catch (err) {
