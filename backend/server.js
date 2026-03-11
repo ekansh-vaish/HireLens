@@ -9,7 +9,7 @@ const ContactUsRoute = require("./Routes/ContactUs");
 const cookieParser = require("cookie-parser");
 const cors = require('cors');
 const session = require("express-session");
-const MongoStore = require("connect-mongo");
+const MongoStore = require("connect-mongo").default;
 require("dotenv").config()
 const MongoDbAtlas = process.env.MONGODB_ATLAS;
 
