@@ -35,12 +35,13 @@ console.log("successfully connected");
 console.log(err);
 })
 
-app.use(cors(
-{
-origin : "http://localhost:5173" ,
-credentials : true 
-}
-));
+app.use(cors({
+  origin: ["https://hire-lens-iwm3.vercel.app/home","hire-lens-iwm3-mhxqbrs7a-ekansh-vaishs-projects.vercel.app","http://localhost:5173"],
+  credentials: true,
+   methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+
+}));
+
 
 const store  =  MongoStore.create({
 mongoUrl : MongoDbAtlas,
