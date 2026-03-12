@@ -11,7 +11,6 @@ const cors = require('cors');
 const session = require("express-session");
 const MongoStore = require("connect-mongo").default;
 require("dotenv").config()
->>>>>>> a4702be81fb8ec31d127b0e27cd3e61d6d7ddf13
 const MongoDbAtlas = process.env.MONGODB_ATLAS;
 
 const session = require("express-session");
