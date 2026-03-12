@@ -29,7 +29,7 @@ console.log(err);
 })
 
 app.use(cors({
-  origin: ["https://hire-lens-iwm3.vercel.app/home","hire-lens-iwm3-mhxqbrs7a-ekansh-vaishs-projects.vercel.app"],
+  origin: ["https://hire-lens-iwm3.vercel.app","hire-lens-iwm3-mhxqbrs7a-ekansh-vaishs-projects.vercel.app"],
   credentials: true,
    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
 
