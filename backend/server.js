@@ -8,8 +8,6 @@ const CompanyRecordRoute = require("./Routes/CompanyData");
 const ContactUsRoute = require("./Routes/ContactUs");
 const cookieParser = require("cookie-parser");
 const cors = require('cors');
-<<<<<<< HEAD
-=======
 const session = require("express-session");
 const MongoStore = require("connect-mongo").default;
 require("dotenv").config()
@@ -36,7 +34,7 @@ console.log(err);
 })
 
 app.use(cors({
-  origin: ["https://hire-lens-iwm3.vercel.app/home","hire-lens-iwm3-mhxqbrs7a-ekansh-vaishs-projects.vercel.app","http://localhost:5173"],
+  origin: ["https://hire-lens-iwm3.vercel.app/home","hire-lens-iwm3-mhxqbrs7a-ekansh-vaishs-projects.vercel.app"],
   credentials: true,
    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
 
