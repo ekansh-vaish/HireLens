@@ -87,7 +87,7 @@ const token = generateToken(payload);
 res.cookie('token', token, {
 maxAge: 24* 60 * 60 * 1000, 
 httpOnly: true, 
-secure: false, 
+secure: true, 
 sameSite: 'none' 
 })
 
@@ -98,7 +98,7 @@ module.exports.Logout = async(req,res) =>
 {
 res.clearCookie("token",{
 httpOnly : true,
-  secure: process.env.NODE_ENV === "production",
+  secure: true,
 sameSite : "none"
 })  
 res.status(200).json({Message : "Logged Out Successfully"})}
