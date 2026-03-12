@@ -13,10 +13,6 @@ const MongoStore = require("connect-mongo").default;
 require("dotenv").config()
 const MongoDbAtlas = process.env.MONGODB_ATLAS;
 
-const session = require("express-session");
-
-const MongoStore = require("connect-mongo").default;
-require("dotenv").config()
 
 async function main() {
 await mongoose.connect(MongoDbAtlas)    
